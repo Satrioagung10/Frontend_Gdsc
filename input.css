@@ -1,0 +1,323 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#home {
+  background-image: url("images/background-home.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.containers {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #2e5aa7cc;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: #000;
+  z-index: 1000;
+  position: fixed;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+}
+
+.menu-items {
+  order: 2;
+  display: flex;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 22px;
+}
+
+.navbar a:hover {
+  color: #fabc05;
+}
+
+.logo {
+ width: 60px;
+ height: 60px;
+ display: flex;
+ align-items: center;
+}
+
+.logo-gdsc h1 {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 22px;
+}
+
+
+.benefit {
+  margin: 3rem auto;
+  border-radius: 1rem;
+  left: 50%;
+  translate: -50%;
+}
+
+.benefit-text {
+  width: 20% ;
+  color: white;
+}
+
+.relation, .skill, .sertifikat {
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.leader, .co-leader {
+  transform: scale(0.8);
+}
+
+.speaker h1 {
+  letter-spacing: 3px;
+}
+/* HEADER */
+
+@media (max-width: 1280px) {
+  .benefit {
+    width: 60%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .benefit {
+    width: 80%;
+  }
+
+  .benefit-text {
+    width: 20%;
+    color: white;
+  }
+}
+
+
+@media (max-width: 767.98px) {
+  .navbar {
+    opacity: 0.95;
+  }
+
+  .navbar-container input[type="checkbox"],
+  .navbar-container .hamburger-lines {
+    display: block;
+  }
+
+  .navbar-container {
+    display: block;
+    position: relative;
+    height: 64px;
+  }
+
+  .navbar-container input[type="checkbox"] {
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 30px;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .navbar-container .hamburger-lines {
+    display: block;
+    height: 28px;
+    width: 35px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .navbar-container .hamburger-lines .line {
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: white;
+  }
+
+  .navbar-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .navbar-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .navbar .menu-items {
+    padding-top: 100px;
+    height: 100vh;
+    max-width: 300px;
+    transform: translate(-150%);
+    display: flex;
+    flex-direction: column;
+    margin-left: -40px;
+    padding-left: 40px;
+    transition: transform 0.5s ease-in-out;
+    box-shadow: 5px 0px 10px 0px #aaa;
+    overflow: scroll;
+    background-color: #0b2f61;
+  }
+
+  .navbar .menu-items li {
+    margin-bottom: 1.8rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+
+  .logo {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    font-size: 2.5rem;
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+    transform: translateX(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+    transform: rotate(45deg);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+    transform: scaleY(0);
+  }
+
+  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+    transform: rotate(-45deg);
+  }
+
+  
+
+  .benefit-text {
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+
+  .relation, .skill, .sertifikat {
+    width: 80%;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 578px){
+  .navbar {
+    height: 65px;
+  }
+
+  .hamburger-lines {
+    transform: scale(0.8);
+  }
+
+  .logo {
+    width: 50px;
+  }
+
+  .benefit {
+    flex-direction: row;
+    width: 95%;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    left: 50%;
+    translate: -50%;
+  }
+
+  .img-benefit img {
+    width: 40px;
+  }
+
+  .skill, .relation, .sertifikat {
+    padding: 10px;
+    margin-top: 0;
+  }
+
+  .skill:hover, .relation:hover, .sertifikat:hover {
+    padding: 10px;
+  }
+  
+  .benefit-text {
+    margin: 0 0 1rem 0;
+  }
+
+}
+
+@media (max-width: 376px) {
+  .navbar .menu-items {
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 325px) {
+  .navbar .menu-items {
+    max-width: 230px;
+  }
+
+  .relation, .skill, .sertifikat {
+    width: 50%;
+    margin-top: 1rem;
+  }
+
+  .project p {
+    font-size: 13px;
+  }
+
+  .project-3 h1 {
+    width: 80%;
+    margin: auto;
+  }
+}
