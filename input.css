@@ -111,7 +111,7 @@ body {
   transform: scale(0.8);
 }
 
-.speaker h1 {
+.title-speaker {
   letter-spacing: 3px;
 }
 /* HEADER */
