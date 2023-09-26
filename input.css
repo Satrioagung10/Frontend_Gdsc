@@ -91,7 +91,7 @@ body {
 
 
 .benefit {
-  margin: 3rem auto;
+  top: 45%;
   border-radius: 1rem;
   left: 50%;
   translate: -50%;
@@ -241,7 +241,9 @@ body {
     transform: rotate(-45deg);
   }
 
-  
+  .benefit {
+    top: 20%;
+  }
 
   .benefit-text {
     width: 100%;
@@ -252,6 +254,7 @@ body {
   .relation, .skill, .sertifikat {
     width: 80%;
     margin-top: 1rem;
+    padding-top: 10px;
   }
 }
 
@@ -288,6 +291,10 @@ body {
 
   .skill:hover, .relation:hover, .sertifikat:hover {
     padding: 10px;
+  }
+
+  .benefit {
+    top: 10%;
   }
   
   .benefit-text {
